@@ -3,4 +3,5 @@
     <string name="redLabel">Red</string>
     <string name="greenLabel">Green</string>
     <string name="blueLabel">Blue</string>
+    <string name="killButton">KILL THE DEMONS</string>
 </resources>

@@ -1,9 +1,15 @@
 package com.digitalfishfun.openshift;
 
 import android.app.Activity;
+import android.util.Log;
 import android.widget.SeekBar;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
 
 /**
  * Created by joonatoona on 6/19/17.
@@ -39,6 +45,6 @@ public class SeekBarListener implements SeekBar.OnSeekBarChangeListener {
         float blue = (blueBar.getProgress()+1);
         blue = blue/100;
 
-        helper.sudo(String.format("service call SurfaceFlinger 1015 i32 1 f %f f 0 f 0 f 0 f 0 f %f f 0 f 0 f 0 f 0 f %f f 0 f 0 f 0 f 0 f 1 > /dev/null", red, green, blue));
+        helper.sh(String.format("echo 1015 i32 1 f %f f 0 f 0 f 0 f 0 f %f f 0 f 0 f 0 f 0 f %f f 0 f 0 f 0 f 0 f 1 > %s", red, green, blue, activity.getCacheDir()+"/pipe"));
     }
 }

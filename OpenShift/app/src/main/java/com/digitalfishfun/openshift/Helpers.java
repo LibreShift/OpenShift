@@ -30,4 +30,27 @@ public class Helpers {
             e.printStackTrace();
         }
     }
+
+    public static void sh(String...strings) {
+        try{
+            Process su = Runtime.getRuntime().exec("sh");
+            DataOutputStream outputStream = new DataOutputStream(su.getOutputStream());
+
+            for (String s : strings) {
+                outputStream.writeBytes(s+"\n");
+                outputStream.flush();
+            }
+
+            outputStream.writeBytes("exit\n");
+            outputStream.flush();
+            try {
+                su.waitFor();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            outputStream.close();
+        }catch(IOException e){
+            e.printStackTrace();
+        }
+    }
 }
