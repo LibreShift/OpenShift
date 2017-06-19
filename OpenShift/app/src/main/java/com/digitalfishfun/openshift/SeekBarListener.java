@@ -45,6 +45,6 @@ public class SeekBarListener implements SeekBar.OnSeekBarChangeListener {
         float blue = (blueBar.getProgress()+1);
         blue = blue/100;
 
-        helper.sh(String.format("echo 1015 i32 1 f %f f 0 f 0 f 0 f 0 f %f f 0 f 0 f 0 f 0 f %f f 0 f 0 f 0 f 0 f 1 > %s", red, green, blue, activity.getCacheDir()+"/pipe"));
+        helper.sh(String.format("killall echo; echo 1015 i32 1 f %f f 0 f 0 f 0 f 0 f %f f 0 f 0 f 0 f 0 f %f f 0 f 0 f 0 f 0 f 1 > %s &", red, green, blue, activity.getCacheDir()+"/pipe"));
     }
 }
