@@ -9,7 +9,7 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
-        <activity android:name=".MainActivity">
+        <activity android:name="com.digitalfishfun.openshift.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

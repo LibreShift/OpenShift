@@ -1,15 +1,7 @@
 package com.digitalfishfun.openshift;
 
 import android.app.Activity;
-import android.util.Log;
 import android.widget.SeekBar;
-
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.OutputStream;
-import java.io.OutputStreamWriter;
 
 /**
  * Created by joonatoona on 6/19/17.

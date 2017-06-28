@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">OpenShift</string>
+    <string name="app_name">LibreShift</string>
     <string name="redLabel">Red</string>
     <string name="greenLabel">Green</string>
     <string name="blueLabel">Blue</string>

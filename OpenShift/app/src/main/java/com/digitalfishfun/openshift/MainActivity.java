@@ -2,10 +2,8 @@ package com.digitalfishfun.openshift;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.SeekBar;
-import android.widget.Toast;
 
 import java.io.File;
 import java.io.FileOutputStream;
